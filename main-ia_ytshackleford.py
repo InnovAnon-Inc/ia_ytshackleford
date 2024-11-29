@@ -2,7 +2,7 @@
 # cython: language_level=3
 # distutils: language=c++
 
-from ia_shackleford.main import main
+from ia_ytshackleford.main import main
 
 if __name__ == '__main__':
 	main()

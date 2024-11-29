@@ -1,14 +1,14 @@
 services:
-  ia_shackleford:
-    hostname:         ia_shackleford.innovanon.com
+  ia_ytshackleford:
+    hostname:         ia_ytshackleford.innovanon.com
     build:
       context:        .
       tags:
-        - innovanon/ia_shackleford:latest
-    #    -           ia_shackleford:latest
-    #    - innovanon/ia_shackleford
-    #    -           ia_shackleford
-    image:            innovanon/ia_shackleford
+        - innovanon/ia_ytshackleford:latest
+    #    -           ia_ytshackleford:latest
+    #    - innovanon/ia_ytshackleford
+    #    -           ia_ytshackleford
+    image:            innovanon/ia_ytshackleford
     restart:          no
     logging:
       driver:         syslog   
