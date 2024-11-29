@@ -113,6 +113,7 @@ from ollama                                  import pull
 from redis                                   import Redis
 import redis.asyncio as aioredis
 from redisvl.schema                          import IndexSchema
+from requests.exceptions                     import ReadTimeout
 from retry_async                             import retry
 import scrapetube
 from structlog                               import get_logger
@@ -348,6 +349,7 @@ class YTShacklefordConfig():
 
 	@retry((
 		ReadTimeoutError,
+		ReadTimeout,
 	), tries=-1, delay=1, backoff=2, max_delay=None, is_async=False)
 	def _load_data(self, ytlink:str,)->Optional[Document]:
 		logger.debug('ytlink: %s', ytlink,)
