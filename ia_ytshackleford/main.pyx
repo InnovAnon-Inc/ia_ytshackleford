@@ -197,8 +197,9 @@ class YTShacklefordConfig():
 	@cached_property
 	def primary_memory(self,)->BaseMemory:
 		return ChatMemoryBuffer.from_defaults(
-			llm=self.chat_memory_llm,
-			chat_store=self.chat_store, )
+			llm           =self.chat_memory_llm,
+			chat_store    =self.chat_store,
+			chat_store_key=self.chat_store_key,)
 
 	@property
 	def secondary_memory_sources(self,)->List[BaseMemory]:
